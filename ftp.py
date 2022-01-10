@@ -16,13 +16,13 @@ with open('text.txt', 'wb') as f:
 """
 def speedTest():
     ini=time.time_ns()
-    with closing(request.urlopen('ftp://ftp-test.telkomadsl.co.za/4Meg-test.file')) as r:
+    with closing(request.urlopen('ftp://ftp-test.telkomadsl.co.za/8Meg-test.file')) as r:
         af=time.time_ns()
         dif=af-ini
         dif=dif/(10**9)
         #print(dif)
-        print("speed= "+str(4/dif))
-        print("it")
+        #print("speed= "+str(8/dif))
+        print(".")
         return dif
 
 mylist=[]
@@ -30,5 +30,6 @@ for i in range(10):
        mylist.append(speedTest()) 
 avgTime=sum(mylist)/len(mylist)
 avgSpeed=4/avgTime
+print(mylist)
 print("avg speed= "+str(avgSpeed))
     

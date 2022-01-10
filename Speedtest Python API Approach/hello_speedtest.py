@@ -12,7 +12,7 @@ s = speedtest.Speedtest()
 s.get_servers(servers)
 s.get_best_server()
 
-for i in range(10):
+for i in range(1):
     s.download(threads=threads)
     results_dict = s.results.dict()
     print(results_dict["download"]/(10**6))
