@@ -60,6 +60,7 @@ def main():
     except KeyboardInterrupt:
         print("interrupted")
         GPIO.cleanup()
+        p.stop()
         sys.exit(0)
 
 if __name__ == "__main__":
