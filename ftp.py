@@ -22,14 +22,14 @@ def speedTest():
         dif=dif/(10**9)
         #print(dif)
         #print("speed= "+str(8/dif))
-        print(".")
-        return dif
+        return 8/dif
 
-mylist=[]
-for i in range(10):
-       mylist.append(speedTest()) 
-avgTime=sum(mylist)/len(mylist)
-avgSpeed=4/avgTime
-print(mylist)
-print("avg speed= "+str(avgSpeed))
+if __name__ == "__main__":
+        mylist=[]
+        for i in range(10):
+                mylist.append(speedTest()) 
+        avgTime=sum(mylist)/len(mylist)
+        avgSpeed=8/avgTime
+        print(mylist)
+        print("avg speed= "+str(avgSpeed))
     
